@@ -29,10 +29,15 @@ parser.add_argument(
     help="Location of StockFish engine.",
     default="./stockfish/sf_" + platform.system(),
 )
+parser.add_argument("-q", "--quiet", help="Whether to print logs.", action="store_true")
 
 
 args = parser.parse_args()
 pgn_file = args.pgn
+
+if args.quiet:
+    logger = logging.getLogger()
+    logger.disabled = True
 
 try:
     chess_engine = chess.engine.SimpleEngine.popen_uci(args.stockfish)
