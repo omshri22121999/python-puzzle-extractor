@@ -13,5 +13,22 @@
 [SetUp "1"]
 [WhiteElo "2356"]
 
-16... O-O 17. Qc2 g6 18. Qxc6 Qxc6 19. Rxc6 Nb4 1-0
+16... O-O 17. Qc2 g6 18. Qxc6 Qxc6 19. Rxc6 1-0
+
+[Event "Vienna"]
+[Site "Vienna AUH"]
+[Date "1910.??.??"]
+[Round "?"]
+[White "Richard Reti"]
+[Black "Savielly Tartakower"]
+[Result "1-0"]
+[BlackElo "?"]
+[ECO "B15"]
+[EventDate "?"]
+[FEN "rnb1kb1r/pp3ppp/2p2n2/4q3/4N3/3Q4/PPPB1PPP/2KR1BNR b kq - 1 8"]
+[PlyCount "21"]
+[SetUp "1"]
+[WhiteElo "?"]
+
+8... Nxe4 9. Qd8+ Kxd8 10. Bg5+ Kc7 11. Bd8# 1-0
 

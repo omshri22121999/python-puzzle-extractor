@@ -4,14 +4,22 @@ Python scripts to extract tactics from a given pgn file. The code idea is from [
 
 ## Usage
 
-Use Python version 3.6 or above
+**Use Python version 3.6 or above**
 
-Requirements :
+- First run the below code
+
+```bash
+python3 tactic-extractor/main.py --pgn='pgn-file-location' --stockfish='stockfish-location' [-q]
+```
+
+- Next run the below code to display the puzzles created
+
+```bash
+python3 chessshow.py
+```
+
+## Install Requirements :
 
 ```bash
 pip install -r requirements.txt
-```
-
-```bash
-python3 main.py --pgn='pgn-file-location' --stockfish='stockfish-location' [-q]
 ```

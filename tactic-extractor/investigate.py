@@ -32,13 +32,7 @@ class Investigate:
             and (curr_score.is_mate())
             and (self.material_value(board) > 3)
         ):
-            if (
-                (prev_score.cp < 110)
-                and (self.mate_sign(curr_score) == -1)
-                or (prev_score.cp > -110)
-                and (self.mate_sign(curr_score) == 1)
-            ):
-                return True
+            return True
         elif (
             not (prev_score.is_mate())
             and not (curr_score.is_mate())

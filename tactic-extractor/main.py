@@ -55,7 +55,7 @@ except Exception as e:
     chess_engine.quit()
     sys.exit()
 
-tactics_file = open("tactics.pgn", "a")
+tactics_file = open("tactics.pgn", "w")
 game_id = 0
 depth_var = 17
 
@@ -113,12 +113,16 @@ while True:
                 log_colors.print_bold("Adding Puzzle to tactics.pgn ..... \n")
             )
             try:
+                if puzzle.positions.category() == "Material":
+                    moves = list(puzzle_pgn.mainline_moves())[0:-1]
+                    puzzle_pgn.remove_variation(0)
+                    puzzle_pgn.add_line(moves)
                 tactics_file.write(str(puzzle_pgn))
                 tactics_file.write("\n\n")
+                logging.debug(log_colors.print_bold("Puzzle Added! \n"))
+
             except Exception as e:
                 logging.error(log_colors.print_fail("ERROR:" + str(e)))
-            finally:
-                logging.debug(log_colors.print_bold("Puzzle Added! \n"))
 
 tactics_file.close()
 all_games.close()
